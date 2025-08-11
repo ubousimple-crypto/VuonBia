@@ -66,7 +66,7 @@ export default function Menu() {
     <div className="bg-wood-dark text-cream font-inter min-h-screen">
       {/* Sticky Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-wood-dark/95 backdrop-blur-sm border-b border-golden/20">
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-3 md:px-4 py-3">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-3">
               <i className="fas fa-utensils text-golden text-2xl"></i>
@@ -116,7 +116,7 @@ export default function Menu() {
 
       {/* Main Content */}
       <main className="pt-40 pb-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 md:px-4">
           
           {/* Restaurant Intro */}
           <section className="mb-12 text-center">
@@ -148,20 +148,22 @@ export default function Menu() {
                 <p className="text-cream/60 text-lg">Không tìm thấy món ăn phù hợp</p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-3 md:gap-6">
                 {filteredItems.map((item) => (
                   <div 
                     key={item.id}
-                    className="bg-wood-light/60 backdrop-blur-sm rounded-xl p-4 border border-golden/20 hover:border-golden/40 transition-all"
+                    className="bg-wood-light/60 backdrop-blur-sm rounded-xl p-2 md:p-4 border border-golden/20 hover:border-golden/40 transition-all"
                   >
                     <img 
                       src={item.image}
                       alt={item.name}
-                      className="w-full aspect-square object-cover rounded-lg mb-4"
+                      className="w-full aspect-square object-cover rounded-lg mb-2 md:mb-4"
                     />
-                    <h4 className="text-lg font-semibold text-golden mb-2">{item.name}</h4>
-                    <p className="text-cream/70 text-sm mb-3">{item.description}</p>
-                    {renderPrices(item)}
+                    <h4 className="text-sm md:text-lg font-semibold text-golden mb-1 md:mb-2 leading-tight">{item.name}</h4>
+                    <p className="text-cream/70 text-xs md:text-sm mb-2 md:mb-3 line-clamp-2">{item.description}</p>
+                    <div className="text-xs md:text-sm">
+                      {renderPrices(item)}
+                    </div>
                   </div>
                 ))}
               </div>
