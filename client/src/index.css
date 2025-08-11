@@ -51,12 +51,12 @@
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   
-  /* Custom Vietnamese Restaurant Colors */
-  --wood-dark: hsl(20 55% 12%);
-  --wood-light: hsl(20 45% 18%);
-  --golden: hsl(48 89% 60%);
-  --orange-accent: hsl(30 100% 50%);
-  --cream: hsl(36 67% 95%);
+  /* Custom Vietnamese Restaurant Colors - Based on Menu Design */
+  --wood-dark: hsl(25 35% 15%);
+  --wood-light: hsl(25 25% 22%);
+  --golden: hsl(45 95% 65%);
+  --orange-accent: hsl(35 90% 55%);
+  --cream: hsl(40 60% 92%);
 }
 
 .dark {
